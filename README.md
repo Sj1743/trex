@@ -1,2 +1,0 @@
-# trex
-online trex platformer
