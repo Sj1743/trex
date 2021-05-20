@@ -38,11 +38,12 @@ function setup() {
   trex.addAnimation("running", trex_running);
   trex.addImage("collided", trex_collided);
   trex.scale = 0.5;
+  trex.setCollider("circle", -15, 0, 50);
   
-  ground = createSprite(200,180,400,20);
+  ground = createSprite(200, 180, 400, 20);
   ground.addImage("ground",groundImage);
-  ground.x = ground.width /2;
-  ground.velocityX = -(6 + 3*score/100);
+  ground.x = ground.width / 2;
+  ground.velocityX = -(6 + 3 * score / 100);
 
   
   gameOver = createSprite(300,100);
@@ -67,12 +68,14 @@ function setup() {
 function draw() {
 
   background(255);
+
+  //trex.debug = true;
   
   if(gameState === PLAY){
 
     score = score + Math.round(getFrameRate()/60);
 
-    if(keyDown("space") && trex.isTouching(invisibleGround)) {
+    if(keyDown("space") && trex.y > 160) {
       trex.velocityY = -14;
     }
     
