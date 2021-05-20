@@ -1,4 +1,4 @@
-## trex
-# online trex platformer
+# trex
+#### online trex platformer
 
-https://sj1743.github.io/trex/
+## https://sj1743.github.io/trex/
